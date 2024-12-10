@@ -297,10 +297,10 @@ xdrawtri.o: xdrawtri.asm
 $(GLIDE_OBJECTS): fxinline.h fxgasm.h
 
 fxinline.h: fxgasm.exe
-	./$< -inline > $@
+	.\$< -inline > $@
 
 fxgasm.h: fxgasm.exe
-	./$< -hex > $@
+	.\$< -hex > $@
 
 fxgasm.exe: fxgasm.c
 	$(HOST_CC) -o $@ $(HOST_CFLAGS) $<
